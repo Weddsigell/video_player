@@ -6,13 +6,43 @@ body {
 
 .container {
   max-width: 1440px;
-  margin: 0 auto 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.player {
+  flex-grow: 1;
+  width: 800px; 
+  height: 600px;
+  box-shadow: 0 0 10px #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.player__layout {
+  background-color: black;
+  display: flex;
+}
+
+.player__video {
+  flex-grow: 1;
 }
 
 .btn {
   border-radius: 0;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+}
+
+.player__btn {
+  color: white;
+  margin: 4px 8px 4px 2px;
+  font-size: 20px;
+}
+
+.player__btn_fullscreen {
+  margin: 4px 2px 4px auto;
 }

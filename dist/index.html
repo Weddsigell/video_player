@@ -8,22 +8,33 @@
 </head>
 <body>
   <div class='container'>
-    <div id="player" style="width: 800px; height: 600px;">
-      <div class="js-video-container" style="width: 100%; height: 100%"></div>
-      <div class="layout">
-        <button class='btn btn_play'>
+    <div class='player' id="player">
+      <div class="player__video js-video-container"></div>
+      <div class="player__layout">
+        <button class='btn player__btn js-play-button'>
           <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <button class='btn player__btn js-pause-button'>
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+        <button class='btn player__btn js-volume-button'>
+          <i class="fa fa-volume-off" aria-hidden="true"></i>
+        </button>
+        <button class='btn player__btn js-mute-button'>
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button class='btn player__btn player__btn_fullscreen js-fullscreen-button'>
+          <i class="fa fa-expand" aria-hidden="true"></i>
         </button>
       </div>
     </div>
   </div>
+  
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
   <script src="player.js"></script>
-
   <script type="text/javascript">
     createPlayer({elementId: 'player'});
   </script>
-
 </body>
 </html>
